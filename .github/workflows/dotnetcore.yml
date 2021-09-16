@@ -26,7 +26,13 @@ jobs:
     - name: DevSkim
       uses: microsoft/DevSkim-Action@v1
       with:
-        output-directory: ./output
+        output-directory: ./output/devskim-results.sarif
+        
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v2
+      with:
+        name: code-coverage-report
+        path: output/
     
     # dotnet build and publish
     - name: Build with dotnet ${{ env.nameVar }}
