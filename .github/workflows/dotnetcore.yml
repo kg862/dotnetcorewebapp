@@ -26,7 +26,7 @@ jobs:
     - name: DevSkim
       uses: microsoft/DevSkim-Action@v1
       with:
-        output-directory: ./output/devskim-results.sarif
+        output-directory: ./output
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
