@@ -42,7 +42,7 @@ jobs:
     - name: InferSharp
       uses: microsoft/infersharpaction@v1.1
       with:
-        binary-path: /home/runner/work/dotnetcorewebapp/dotnetcorewebapp/dotnet-core-webapp/bin/Release/netcoreapp3.0/*.dll
+        binary-path: /home/runner/work/dotnetcorewebapp/dotnetcorewebapp/dotnet-core-webapp/bin/Release/netcoreapp3.0/dotnetcore-webapp.dll
       
     - name: dotnet publish
       run: |
