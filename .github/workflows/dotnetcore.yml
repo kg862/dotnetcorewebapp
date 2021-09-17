@@ -38,6 +38,11 @@ jobs:
     - name: Build with dotnet ${{ env.nameVar }}
       run: |
         dotnet build --configuration Release ./dotnet-core-webapp/dotnetcore-webapp.csproj
+    - name: InferSharp
+      uses: microsoft/infersharpaction@v1.1
+      with:
+    # The path where the binaries (.dll and .pdb) are located.
+       binary-path: ./
 
     - name: dotnet publish
       run: |
