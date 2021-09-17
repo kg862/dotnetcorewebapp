@@ -35,7 +35,7 @@ jobs:
       uses: AppThreat/sast-scan-action@1.0.2
       with:
        output: ./output
-       type: C#
+       type: "C#"
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
