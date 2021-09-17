@@ -42,7 +42,7 @@ jobs:
       uses: microsoft/infersharpaction@v1.1
       with:
     # The path where the binaries (.dll and .pdb) are located.
-       binary-path: ./
+       binary-path: '/home/runner/work/dotnetcorewebapp/dotnetcorewebapp/dotnet-core-webapp/bin/Release/netcoreapp3.0/'
 
     - name: dotnet publish
       run: |
