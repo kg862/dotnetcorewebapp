@@ -31,12 +31,11 @@ jobs:
     - name: Trufflehog Check
       uses: UnicornGlobal/trufflehog-actions-scan@v1.0.0
       
-    - name: flawfinder_scan
-  # You may pin to the exact commit or the version.
-  # uses: david-a-wheeler/flawfinder@8e4a779ad59dbfaee5da586aa9210853b701959c
-      uses: david-a-wheeler/flawfinder@2.0.19-alpha1
+    - name: sast-scan
+      uses: AppThreat/sast-scan-action@1.0.2
       with:
-        output: ./output/FlawFinder.txt
+       output: ./output
+       type: C#
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
