@@ -27,10 +27,6 @@ jobs:
       uses: microsoft/DevSkim-Action@v1
       with:
         output-directory: ./
-    - name: InferSharp
-      uses: microsoft/infersharpaction@v1.1
-      with:
-        binary-path: 
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
