@@ -53,3 +53,4 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         publish-profile: ${{ secrets.PUBLISHPROFILE }}
+        package: './dotnetcorewebapp' 
