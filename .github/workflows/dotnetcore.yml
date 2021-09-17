@@ -42,11 +42,7 @@ jobs:
     - name: Build with dotnet ${{ env.nameVar }}
       run: |
         dotnet build --configuration Release ./dotnet-core-webapp/dotnetcore-webapp.csproj
-        
-    - name: InferSharp
-      uses: microsoft/infersharpaction@v1.1
-      with:
-        binary-path: /home/runner/work/dotnetcorewebapp/dotnetcorewebapp/dotnet-core-webapp/bin/Release/netcoreapp3.0/
+
     - name: dotnet publish
       run: |
         dotnet publish -c Release -o dotnetcorewebapp ./dotnet-core-webapp
