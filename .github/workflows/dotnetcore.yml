@@ -36,7 +36,7 @@ jobs:
   # uses: david-a-wheeler/flawfinder@8e4a779ad59dbfaee5da586aa9210853b701959c
       uses: david-a-wheeler/flawfinder@2.0.19-alpha1
       with:
-        output: ./output
+        output: ./output/FlawFinder.txt
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
