@@ -26,16 +26,11 @@ jobs:
     - name: DevSkim
       uses: microsoft/DevSkim-Action@v1
       with:
-        output-directory: ./output
-        
-    - name: Trufflehog Check
-      uses: UnicornGlobal/trufflehog-actions-scan@v1.0.0
-      
-    - name: sast-scan
-      uses: AppThreat/sast-scan-action@1.0.2
+        output-directory: ./
+    - name: InferSharp
+      uses: microsoft/infersharpaction@v1.1
       with:
-       output: ./output
-       type: "C#"
+        binary-path: 
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
@@ -47,6 +42,11 @@ jobs:
     - name: Build with dotnet ${{ env.nameVar }}
       run: |
         dotnet build --configuration Release ./dotnet-core-webapp/dotnetcore-webapp.csproj
+        
+    - name: InferSharp
+      uses: microsoft/infersharpaction@v1.1
+      with:
+        binary-path: ./
       
     - name: dotnet publish
       run: |
