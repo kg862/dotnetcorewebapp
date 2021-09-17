@@ -30,7 +30,7 @@ jobs:
     - name: Resharper InspectCode
       uses: nbadal/inspectcode-action@v1
       with:
-        solution: ./
+        solution: ./*.*
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
