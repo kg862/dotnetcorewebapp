@@ -27,10 +27,6 @@ jobs:
       uses: microsoft/DevSkim-Action@v1
       with:
         output-directory: ./
-    - name: Resharper InspectCode
-      uses: nbadal/inspectcode-action@v1
-      with:
-        solution: ./*.*
         
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
